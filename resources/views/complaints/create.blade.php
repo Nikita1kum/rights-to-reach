@@ -10,7 +10,7 @@
 
         @section('content')
         <div class="max-w-md mx-auto mt-10">
-            <h2 class="text-xl font-bold mb-4">File a Complaint</h2>
+            <h2 class="text-xl font-bold mb-4">File Complaint</h2>
             <form method="POST" action="{{ route('complaint.store') }}">
                 @csrf
                 <div class="mb-4">
