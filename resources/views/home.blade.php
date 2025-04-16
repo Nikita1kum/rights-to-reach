@@ -9,12 +9,12 @@
 
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="text-xl font-semibold text-gray-800">
+        <h2 class="text-xl font-semibold text-white">
             Welcome to Rights to Reach
         </h2>
     </x-slot>
 
-    <div class="p-6 text-gray-900">
+    <div class="p-6 text-white">
         <p class="mb-4">Know your rights and take action!</p>
 
         <a href="{{ route('register') }}"
@@ -23,8 +23,14 @@
         </a>
 
         <a href="{{ route('login') }}"
-           class="inline-block bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded">
+           class="inline-block bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded mr-2">
             Login
+        </a>
+
+        <a href="{{ route('complaint.create') }}"
+        class="inline-block bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded">
+         Raise Issue
+     </a>
         </a>
     </div>
 </x-app-layout>

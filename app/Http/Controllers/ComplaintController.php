@@ -7,11 +7,13 @@ use App\Models\Complaint;
 
 class ComplaintController extends Controller
 {
-    public function index()  //was not
+        public function index()
     {
-        $complaints = Complaint::all();
-        return view('complaints.index', compact('complaints'));
+        $complaints = auth()->user()->complaints()->latest()->get();
+
+        return view('complaints.index', compact('complaint'));
     }
+
 
     public function create()
     {
@@ -29,13 +31,13 @@ class ComplaintController extends Controller
             'title' => $request->title,
             'description' => $request->description,
             'user_id' => auth()->id(),
-            'status' => 'Pending',  //was not
+            'status' => 'Pending',
         ]);
 
         return redirect()->route('dashboard')->with('success', 'Complaint filed successfully!');
     }
 
-    public function show($id) //was not
+    public function show($id)
     {
         $complaint = Complaint::findOrFail($id);
         return view('complaints.show', compact('complaint'));
