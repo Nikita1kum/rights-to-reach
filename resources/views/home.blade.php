@@ -23,8 +23,13 @@
         </a>
 
         <a href="{{ route('login') }}"
-           class="inline-block bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded">
+           class="inline-block bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded mr-2">
             Login
         </a>
+
+        <a href="{{ route('complaint.create') }}"
+        class="inline-block bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded mr-2">
+         Raise Issue
+     </a>
     </div>
 </x-app-layout>
